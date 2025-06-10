@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxw23iwdywolf"]
+
+[ext_resource type="Script" uid="uid://bcb1hc08140pd" path="res://scripts/characters/player.gd" id="1_uig86"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0rwas"]
+load_path = "res://.godot/imported/pixel-monster-sprite-generator.svg-1daa2930dcdca4c23517b7d1d91c1fd1.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpjcp"]
+size = Vector2(16, 14)
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_uig86")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(1, 0.984848)
+texture = SubResource("CompressedTexture2D_0rwas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_kpjcp")

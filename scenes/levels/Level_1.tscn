@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvhp12nvnxl7f"]
 
-[ext_resource type="PackedScene" uid="uid://dxw23iwdywolf" path="res://Player.tscn" id="1_t7iv1"]
+[ext_resource type="PackedScene" uid="uid://dxw23iwdywolf" path="res://scenes/Characters/Player.tscn" id="1_ukdbm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7iv1"]
 size = Vector2(499.605, 40)
 
-[node name="Level" type="Node2D"]
+[node name="Level_1" type="Node2D"]
 position = Vector2(0, 536)
 scale = Vector2(1.0088, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_t7iv1")]
+[node name="Player" parent="." instance=ExtResource("1_ukdbm")]
 position = Vector2(15.8605, 64)
 
 [node name="Floor" type="StaticBody2D" parent="."]
