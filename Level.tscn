@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhp12nvnxl7f"]
+
+[ext_resource type="PackedScene" uid="uid://dxw23iwdywolf" path="res://Player.tscn" id="1_t7iv1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7iv1"]
+size = Vector2(499.605, 40)
+
+[node name="Level" type="Node2D"]
+position = Vector2(0, 536)
+scale = Vector2(1.0088, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_t7iv1")]
+position = Vector2(15.8605, 64)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 72)
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+custom_minimum_size = Vector2(500, 32)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.423529, 1, 0.133333, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(249.802, 20)
+shape = SubResource("RectangleShape2D_t7iv1")
